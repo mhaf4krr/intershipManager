@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Internship and Trainings Manager</title>
+
+    <style>
+
+        body {
+            background:rgba(31, 30, 30, 0.623);
+        }
+    #user-register-div{
+        width:50%;
+        margin:auto;
+        text-align: center;
+        background: rgba(31, 28, 28, 0.801);
+        border : white solid;
+    }
+
+ 
+
+    label {
+        color:white;
+        font-size: 1rem;
+    }
+     #user-register-div br {
+         margin-top:20px;
+         
+     }
+
+     .success {
+         background: white;
+         color: green;
+     }
+
+     #control-panel{
+         margin-top :50px;
+        margin:auto;
+        text-align: center;
+     }
+
+     table {
+         margin: auto;
+         text-align: center;
+         border :1;
+         background: white;
+     }
+
+     th td {
+        padding-right: 50px;
+        padding-left:50px;
+     }
+
+     tr:nth-child(even) {
+         background:rgb(194, 191, 191);
+     }
+
+     tr:nth-child(odd) {
+         background:rgb(221, 215, 215);
+     }
+
+     nav {
+         background: black;
+         height:70px;
+         color:white;
+         text-align: center;
+         padding:50px;
+     }
+     footer {
+        background: black;
+         height:40px;
+         width: 100%;
+
+         color:white;
+         text-align: center;
+         padding:05px;
+         position: fixed;
+         bottom: 0;
+         width: auto;
+         margin: auto;
+     }
+
+     .hidden{
+         display: none;
+     }
+
+     .show{
+         display: block;
+     }
+
+     #data-management {
+         margin:auto;
+         text-align: center;
+     }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Department of Mechanical Engineering , IUST</h1>
+        <label for="mode">Select Role of Operation</label>
+        <select name="mode" id="mode">
+            <option value="registeration">Student Registeration</option>
+            <option value="admin">Adminstration</option>
+            <option value="data-management">Data Management</option>
+        </select>
+        
+    </nav>
+    <br>
+    
+    <div id="user-register-div">
+        <form id='user-register-form'>
+            <br>
+            <label for="firstName">First Name</label>
+            <input type="text" id='firstName' required>
+            
+            <br>
+            <label for="lasttName">Last Name</label>
+            <input type="text" id='lastName' required>
+            
+            <br>
+            <label for="rollNo">Roll Number:</label>
+            <input type="number" id='rollNo' required>
+
+            <br>
+            <label for="user-email">Email:</label>
+            <input type="email" id='user-email' required>
+
+            <br>
+            <label for="Preference1">Preference 1:</label>
+            <input type="text" id='Preference1' required>
+            
+            <br>
+            <label for="Preference2">Preference 2:</label>
+            <input type="text" id='Preference2' required>
+           
+            <br>
+            <label for="Preference3">Preference 3</label>
+            <input type="text" id='Preference3' required>
+            <br>
+
+            
+            <br>
+            <button type="submit">Register Student</button>
+
+        </form>
+
+        <span id='register-status'></span>
+        <br><br>
+
+    </div>
+    <br>
+
+    <hr>
+
+    <div id = 'control-panel'>
+        <h3>Adminstration Area </h3>
+        <input type="text" name="" id="searchText" placeholder="Search Query"><br><br>
+        <select name="criteria" id="criteria">
+            <option value="uid">Reference ID</option>
+            <option value="roll">Roll Number</option>
+            <option value="preference">Preference</option>
+        </select>
+
+        <button id='search-button'>Search</button><button id='display-all'>Display all Enrolled</button>
+   
+    <br><br><br>
+    <div id='display-board'>
+        <table id='table1' border='1'>
+                
+        
+
+        </table>
+    </div>
+</div>
+
+<div id='data-management'>
+    <p>Note for data management -> Export :will push the local data to the text area which can be copied and stored in a txt file as backup <br>
+    Import : using import you can restore the data from the same txt file.
+    </p> <br>
+    <textarea name="" id="data-file" cols="30" rows="10"></textarea><br>
+    <button id='import'>Import Data</button>
+    <button id='export'>Export Data</button>
+    <br><br>
+    <span id='notify'></span>
+</div>
+    <footer>
+        <h4>Dedicated to my hard working friend Farhan by <a href='http://www.facebook.com/mhaf4krr'>Mufti Hyder Ali</a></h4>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
